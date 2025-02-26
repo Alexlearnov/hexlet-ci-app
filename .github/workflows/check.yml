@@ -1,0 +1,16 @@
+name: checking-hexlet-test
+
+on: push
+
+jobs:
+  build:
+  runs-on: ubuntu-latest
+  steps:
+    make setup
+    echo "setup step passed"
+    make start
+    echo "start step passed"
+    make lint
+    echo "lint step passed"
+    make test
+    echo "test step passed"
