@@ -6,11 +6,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - make setup
-      - echo "setup step passed"
-      - make start
-      - echo "start step passed"
-      - make lint
-      - echo "lint step passed"
-      - make test
-      - echo "test step passed"
+      - name: Setup
+        run: make setup
+      - name: Start
+        run: make start
+      - name: Lint
+        run: make lint
+      - name: Test
+        run: make test
